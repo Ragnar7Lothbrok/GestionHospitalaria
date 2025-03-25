@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace GestionHospitalaria
 {
@@ -36,6 +37,7 @@ namespace GestionHospitalaria
         };
         static Random random = new Random();
         static Stopwatch cronometro = Stopwatch.StartNew();
+        static HashSet<int> idsGenerados = new HashSet<int>(); // Nos aseguramos que los IDs sean únicos
 
         static void Main(string[] args)
         {
@@ -59,7 +61,15 @@ namespace GestionHospitalaria
 
             while (numeroPaciente <= 4) // Generamos solo 4 pacientes para esta simulación
             {
-                int idAleatorio = random.Next(1, 101); // Generamos un ID único entre 1 y 100
+                int idAleatorio;
+                lock (random) 
+                {
+                    do
+                    {
+                        idAleatorio = random.Next(1, 101); 
+                    }
+                    while (!idsGenerados.Add(idAleatorio)); // Añade el ID si es único, sino genera otro.
+                }
                 int tiempoConsulta = random.Next(5000, 15001); // Tiempo en consulta aleatorio entre 5 y 15 segundos
                 int tiempoLlegada = (int)(cronometro.ElapsedMilliseconds / 1000);
 
