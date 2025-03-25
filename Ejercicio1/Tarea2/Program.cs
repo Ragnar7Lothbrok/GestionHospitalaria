@@ -75,7 +75,7 @@ namespace GestionHospitalaria
 
                 Paciente nuevoPaciente = new Paciente(idAleatorio, numeroPaciente, tiempoConsulta, tiempoLlegada);
                 
-                Console.WriteLine($"Paciente {numeroPaciente} con ID: {nuevoPaciente.Id} llega al hospital y espera ser atendido. Tiempo de llegada: {nuevoPaciente.TiempoLlegada} segundos.");
+                Console.WriteLine($"Paciente {nuevoPaciente.Id}. Llegado el {nuevoPaciente.LlegadaHospital}. Estado: {nuevoPaciente.Estado}. Duración Espera: {nuevoPaciente.TiempoLlegada} segundos.");
                 colaPacientes.Add(nuevoPaciente);
 
                 numeroPaciente++;
@@ -100,13 +100,18 @@ namespace GestionHospitalaria
 
                 try
                 {
+                    int tiempoInicioConsulta = (int)(cronometro.ElapsedMilliseconds / 1000);
                     paciente.Estado = "Consulta";
-                    Console.WriteLine($"Médico {numeroMedico + 1} está atendiendo al Paciente {paciente.LlegadaHospital} (ID: {paciente.Id}).");
+                    int duracionEspera = tiempoInicioConsulta - paciente.TiempoLlegada;
+
+                    Console.WriteLine($"Médico {numeroMedico + 1} está atendiendo al Paciente {paciente.Id}. Llegado el {paciente.LlegadaHospital}. Estado: {paciente.Estado}. Duración Espera: {duracionEspera} segundos.");
 
                     Thread.Sleep(paciente.TiempoConsulta); // Tiempo de consulta aleatorio
 
+                    int tiempoFinConsulta = (int)(cronometro.ElapsedMilliseconds / 1000);
+                    int duracionConsulta = tiempoFinConsulta - tiempoInicioConsulta;
                     paciente.Estado = "Finalizado";
-                    Console.WriteLine($"Paciente {paciente.LlegadaHospital} (ID: {paciente.Id}) ha sido atendido por el Médico {numeroMedico + 1}. Estado: {paciente.Estado}");
+                    Console.WriteLine($"Paciente {paciente.Id}. Llegado el {paciente.LlegadaHospital}. Estado: {paciente.Estado}. Duración Consulta: {duracionConsulta} segundos. Ha sido atendido por el Médico {numeroMedico + 1}.");
                 }
                 finally
                 {
