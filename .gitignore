@@ -1,3 +1,6 @@
-# Ignorar carpetas generadas automáticamente
+# Ignorar la carpeta images
+Ejercicio1/Tarea1/images/
+
+# Ignorar todas las carpetas obj y bin
 bin/
 obj/
