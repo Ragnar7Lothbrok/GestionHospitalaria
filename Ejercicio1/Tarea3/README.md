@@ -2,7 +2,7 @@ Ejercicio 1 - Tarea 3: Visualización del avance
 
 📌 Propósito
 
-Mostrar información detallada del paciente junto con sus cambios de estado, tiempo de espera y duración de consulta.
+El propósito de esta tarea es mostrar información detallada de cada paciente a medida que pasa por diferentes estados: Espera, Consulta y Finalizado. Además, se muestra el tiempo que ha pasado en cada estado (tiempo de espera y duración de consulta).
 
 📂 Instrucciones de Ejecución
 
@@ -14,9 +14,10 @@ dotnet run
 
 📸 Capturas de Pantalla
 
-Añadir captura de pantalla de la ejecución aquí.
+![Ejecución del Programa](./images/captura3.png)
 
 ❓ Pregunta
 
-¿Has decidido visualizar información adicional a la planteada en el ejercicio? ¿Por qué?
-[Respuesta]
+--¿Has decidido visualizar información adicional a la planteada en el ejercicio? ¿Por qué?
+
+    -Sí, se ha decidido visualizar también el tiempo de espera antes de que un paciente entre en consulta. Esto permite ver de forma clara cuánto tiempo pasa un paciente desde su llegada hasta que es atendido por un médico. Además, se ha agregado un pequeño retraso en el mensaje inicial para que se visualice claramente el tiempo de espera antes de ser atendido por un médico, lo cual mejora la claridad de la simulación.
