@@ -58,7 +58,7 @@ dotnet run
 
 
 
-    ---Datos con 50 pacientes generados:---
+    🔍 Ejecución del Programa (50 Pacientes Generados)
 
 ![Ejecución del Programa](./images/captura25.png)
 
@@ -73,7 +73,7 @@ dotnet run
 
 
 
----Datos con 100 pacientes generados:---
+    🔍 Ejecución del Programa (100 Pacientes Generados)
 
 ![Ejecución del Programa](./images/captura28.png)
 
