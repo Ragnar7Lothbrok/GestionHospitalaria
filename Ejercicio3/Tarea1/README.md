@@ -17,7 +17,43 @@ dotnet run
 
 📸 Capturas de Pantalla
 
-Añadir captura de pantalla de la ejecución aquí.
+![Ejecución del Programa](./images/captura15.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura16.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura17.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura18.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura19.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura20.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura21.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura22.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura23.png)
+
+    ---Siguiente foto---
+
+![Ejecución del Programa](./images/captura24.png)
 
 ❓ Preguntas y Respuestas
 
