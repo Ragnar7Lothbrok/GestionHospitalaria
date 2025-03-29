@@ -83,7 +83,7 @@ namespace GestionHospitalaria
         {
             int numeroPaciente = 1;
 
-            while (numeroPaciente <= 50)
+            while (numeroPaciente <= 100)
             {
                 int idAleatorio;
                 lock (random) 
