@@ -17,6 +17,8 @@ dotnet run
 
 📸 Capturas de Pantalla
 
+    🔍 Ejecución del Programa (Pacientes Generados de forma infinita)
+
 ![Ejecución del Programa](./images/captura15.png)
 
     ---Siguiente foto---
